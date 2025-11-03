@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PathForge Automations — Build Faster. Scale Smarter.</title>
+  <meta name="description" content="PathForge Automations builds modern software and automation for schools, businesses, and governments. Websites, portals, AI assistants, and smart bots that deliver real results." />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta property="og:title" content="PathForge Automations" />
+  <meta property="og:description" content="Build Faster. Scale Smarter." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/logo.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <style>
+    :root{
+      --bg:#0b1020;--muted:#94a3b8;--text:#e6edf3;--brand:#22d3ee;--brand-2:#6366f1;--accent:#10b981;--shadow:0 10px 30px rgba(2,8,23,.4);--radius:18px
+    }
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:var(--text);background:linear-gradient(180deg,#050816,var(--bg))}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .card{background:linear-gradient(180deg,rgba(99,102,241,.08),rgba(34,211,238,.06));border:1px solid #263353;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    h2{font-size:28px;margin:0 0 18px}
+    .btn{padding:12px 18px;border-radius:14px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#031225;font-weight:700;box-shadow:var(--shadow);border:none;cursor:pointer}
+    .btn:hover{opacity:.9}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:none;margin-top:6px;margin-bottom:10px;font-size:15px}
+    form label{font-weight:600}
+    .grid{display:grid;gap:20px;grid-template-columns:1fr 1fr}
+    @media(max-width:700px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <section id="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="grid">
+        <form class="card" id="contactForm" action="https://formsubmit.co/pathforge.automations@gmail.com" method="POST" target="_blank" rel="noopener">
+          <input type="hidden" name="_subject" value="New inquiry from PathForge website" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <label>Name<br><input required name="name" placeholder="Your name" /></label>
+          <label>Email<br><input required type="email" name="email" placeholder="you@example.com" /></label>
+          <label>Message<br><textarea required name="message" placeholder="Tell us about your project" rows="5"></textarea></label>
+          <button class="btn" type="submit">Send</button>
+          <p class="muted">Submissions go directly to <strong>pathforge.automations@gmail.com</strong>. You’ll receive an auto‑reply confirmation.</p>
+        </form>
+        <div class="card">
+          <p><strong>Email:</strong> <a href="mailto:pathforge.automations@gmail.com">pathforge.automations@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+917995982418">+91 79959 82418</a></p>
+          <p class="muted">We respond within 24 hours on business days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    // No redirect script needed because we open FormSubmit in a new tab.
+    // Show a lightweight thank‑you banner if redirected here
+    if(location.hash === '#thanks'){
+      const banner = document.createElement('div');
+      banner.className = 'card';
+      banner.style.maxWidth = '700px';
+      banner.style.margin = '20px auto';
+      banner.innerHTML = '<strong>Thanks!</strong> Your message was sent successfully. We\'ll get back within 24 hours.';
+      document.querySelector('#contact .container').prepend(banner);
+    }
+  </script>
+</body>
+</html>
